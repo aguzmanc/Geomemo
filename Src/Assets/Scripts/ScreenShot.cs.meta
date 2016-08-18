@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 01183dd7e0a061b44a27fc05a02f9030
+timeCreated: 1468374348
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - overviewTexture: {fileID: 8400000, guid: 1fd754fa1f1513e4e8d774bbde739047, type: 2}
+  - OVcamera: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
