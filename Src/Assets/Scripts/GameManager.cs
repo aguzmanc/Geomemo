@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager : MonoBehaviour 
@@ -23,6 +22,7 @@ public class GameManager : MonoBehaviour
 	public float StartTime;
 
 	private Place _currentPlaceToFind; // not discovered yet
+	private Place _lastFoundPlace; // discovered
 
 	private float _timeToStart;
 	private bool _gameStarted;
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 	private int _currentPlaceIndex;
 	private bool _gamePaused;
 	private bool _gameEnded;
+	private bool _gameLost;
 	private bool _canLeaveThisLevel;
 	private float _timeLeft;
 	private bool _inputLocked;
@@ -72,7 +73,7 @@ public class GameManager : MonoBehaviour
 	void Update () 
 	{
 		if (_canLeaveThisLevel && Input.anyKeyDown) {
-            SceneManager.LoadScene("MainScreen");
+			Application.LoadLevel("MainScreen");
 		}
 
 
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
 	public void AssignNextObjective()
 	{
 		_currentPlaceToFind.LeavePlace ();
+		_lastFoundPlace = _currentPlaceToFind;
 
 		_currentPlaceIndex ++;
 
@@ -139,6 +141,7 @@ public class GameManager : MonoBehaviour
 		_inputLocked = true;
 		_gameStarted = false;
 		_gameEnded = false;
+		_gameLost = false;
 		_gamePaused = true;
 
 		UIManager.Instance.StartGameUI();
@@ -207,6 +210,7 @@ public class GameManager : MonoBehaviour
 
 	public void GameLost()
 	{
+		_gameLost = true;
 		_gameEnded = true;
 		_gamePaused = true;
 		_inputLocked = true;

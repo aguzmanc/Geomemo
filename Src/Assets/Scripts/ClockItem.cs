@@ -26,7 +26,7 @@ public class ClockItem : MonoBehaviour
 		if (coll.tag == "Player") {
 			_particles.Stop();
 			_particles.Play ();
-			GameObject body = transform.FindChild("Body").gameObject;
+			GameObject body = transform.Find("Body").gameObject;
 			body.GetComponent<Animation>().Play();
 			GetComponent<AudioSource>().Play ();
 
