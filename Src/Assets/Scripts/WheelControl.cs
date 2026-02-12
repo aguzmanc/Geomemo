@@ -53,9 +53,6 @@ public class WheelControl : MonoBehaviour {
 		} else
 			_coll.brakeTorque = 0.0f;
 
-		Debug.Log (_coll.brakeTorque);
-
-
 		_coll.motorTorque = Torque/2;//Input.GetAxis ("Vertical") * Torque;
 
 
