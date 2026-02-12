@@ -13,6 +13,6 @@ public class Rotating : MonoBehaviour {
 	
 	void Update () 
 	{
-		transform.Rotate (Vector3.up, Velocity);
+		transform.Rotate (Vector3.up, Time.deltaTime * Velocity);
 	}
 }
