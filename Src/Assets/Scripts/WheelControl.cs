@@ -43,9 +43,9 @@ public class WheelControl : MonoBehaviour {
 
 		if (false == IsFrontWheel) {
 			if (GameManager.Instance.IsGamePaused) {
-				_coll.brakeTorque = 2500.0f;
+				_coll.brakeTorque = 5000.0f;
 			} else  {
-				if (Input.GetKey (KeyCode.Delete) || Input.GetKey (KeyCode.Escape) || Input.GetKey (KeyCode.B))
+				if (Input.GetKey (KeyCode.Delete) || Input.GetKey (KeyCode.Escape) || Input.GetKey (KeyCode.B) || Input.GetAxis("Vertical") < 0.0f)
 					_coll.brakeTorque = 5000.0f;
 				else
 					_coll.brakeTorque = 0.0f;
