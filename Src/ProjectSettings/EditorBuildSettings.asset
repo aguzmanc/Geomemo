@@ -4,4 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SCENES/MainScreen.unity
+    guid: 31e176002c70d4b7fb9fb8b2cf0a11af
+  - enabled: 1
+    path: Assets/SCENES/Cochabamba_DOS.unity
+    guid: 26bcae53d4ee64905bc78cc4d917f74a
+  - enabled: 1
+    path: Assets/SCENES/Uyuni.unity
+    guid: 6639dd5e2ea364186972842dd6b0106a
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

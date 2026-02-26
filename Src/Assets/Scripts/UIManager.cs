@@ -60,7 +60,7 @@ public class UIManager : MonoBehaviour
 				int plus = (int)(timeLeft * 100);
 
 				UnityEngine.UI.Text text = 
-					LabelTimeLeft.transform.FindChild("Text").GetComponent<UnityEngine.UI.Text>();
+					LabelTimeLeft.transform.Find("Text").GetComponent<UnityEngine.UI.Text>();
 
 				text.text = string.Format("{0:00}", (int)(plus / 100)) + "." + 
 							string.Format("{0:00}", (int)(plus % 100)) + " seg.";
@@ -118,7 +118,7 @@ public class UIManager : MonoBehaviour
 		LabelPlaceName.SetActive (false);
 
 		PhotoClue.SetActive (true);
-		PhotoClue.transform.FindChild ("Image").GetComponent<UnityEngine.UI.Image> ().sprite = clueImage;
+		PhotoClue.transform.Find ("Image").GetComponent<UnityEngine.UI.Image> ().sprite = clueImage;
 
 		// remove photos
 		GameObject [] photos = GameObject.FindGameObjectsWithTag ("photo");
@@ -146,7 +146,7 @@ public class UIManager : MonoBehaviour
 	public void HideClueImage()
 	{
 		PhotoClue.SetActive (false);
-		PhotoClue.transform.FindChild ("Image").GetComponent<UnityEngine.UI.Image> ().sprite = null;
+		PhotoClue.transform.Find ("Image").GetComponent<UnityEngine.UI.Image> ().sprite = null;
 	}
 
 	public void ShowWinnerMessage()
@@ -207,7 +207,7 @@ public class UIManager : MonoBehaviour
 		_flashLevel = 1.0f;
 		GameObject photo = (GameObject)Instantiate (PhotoAPrototype);
 		photo.transform.SetParent (gameObject.transform, false);
-		photo.transform.FindChild ("Image").gameObject.GetComponent<UnityEngine.UI.Image> ().sprite = sprite;
+		photo.transform.Find ("Image").gameObject.GetComponent<UnityEngine.UI.Image> ().sprite = sprite;
 	}
 
 
@@ -216,7 +216,7 @@ public class UIManager : MonoBehaviour
 		_flashLevel = 1.0f;
 		GameObject photo = (GameObject)Instantiate (PhotoBPrototype);
 		photo.transform.SetParent (gameObject.transform, false);
-		photo.transform.FindChild ("Image").gameObject.GetComponent<UnityEngine.UI.Image> ().sprite = sprite;
+		photo.transform.Find ("Image").gameObject.GetComponent<UnityEngine.UI.Image> ().sprite = sprite;
 	}
 
 	public void ShowPressKeyToContinueMessage ()

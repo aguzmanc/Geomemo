@@ -3,6 +3,7 @@ using System.Collections;
 
 public class FadeOut : MonoBehaviour 
 {
+    public TMPro.TMP_Text TextMP;
 	public UnityEngine.UI.Text Text;
 	public UnityEngine.UI.Image Image;
 	public float Duration = 3.0f;
@@ -20,6 +21,9 @@ public class FadeOut : MonoBehaviour
 		if (Image != null)
 			_colorImage = Image.color;
 
+        if(TextMP != null)
+            _colorText = TextMP.color;
+
 		_startTime = Time.time;
 	}
 	
@@ -34,6 +38,9 @@ public class FadeOut : MonoBehaviour
 
 		if (Image != null)
 			Image.color = Color.Lerp (_colorImage, new Color(_colorImage.r, _colorImage.g, _colorImage.b, 1-p), p);
+
+        if(TextMP != null)
+            TextMP.color = Color.Lerp (_colorImage, new Color(_colorImage.r, _colorImage.g, _colorImage.b, 1-p), p);
 
 		if (p >= 1.0f)
 			Destroy (this.gameObject);

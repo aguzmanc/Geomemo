@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityStandardAssets.ImageEffects;
+using UnityStandardAssets.ImageEffects;
 
 public class CameraFollower : MonoBehaviour 
 {

@@ -11,7 +11,7 @@ public class PlaceActivator : MonoBehaviour
 	void Awake()
 	{
 		_particles = GetComponent<ParticleSystem> ();
-        _particles.enableEmission = false;
+		_particles.enableEmission = false;
 
 	}
 
