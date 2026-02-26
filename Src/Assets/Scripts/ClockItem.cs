@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ClockItem : MonoBehaviour 
 {
@@ -26,6 +27,7 @@ public class ClockItem : MonoBehaviour
 		if (coll.tag == "Player") {
 			_particles.Stop();
 			_particles.Play ();
+            Debug.Log(transform.Find("Body"));
 			GameObject body = transform.Find("Body").gameObject;
 			body.GetComponent<Animation>().Play();
 			GetComponent<AudioSource>().Play ();

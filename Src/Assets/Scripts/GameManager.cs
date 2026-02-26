@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
 		yield return new WaitForSeconds (1.0f);
 		UIManager.Instance.ShowFadeOutText ("1", 1.0f, 1.0f);
 		yield return new WaitForSeconds (1.0f);
-		UIManager.Instance.ShowFadeOutText ("¡VAMOS!", 2.0f, 1.5f);
+		UIManager.Instance.ShowFadeOutText ("¡SIGUE LOS AROS!", 2.0f, 1.5f);
 
 		yield return new WaitForSeconds (1.0f);
 

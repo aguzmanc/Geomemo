@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43137255, g: 0.69803923, b: 0.78431374, a: 1}
+  m_Color: {r: 0, g: 0.620383, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -75,7 +75,7 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 200
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -93,9 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c772f992b7ff41f3b4a6b2985c0ad60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextMP: {fileID: 0}
   Text: {fileID: 11415344}
   Image: {fileID: 0}
-  Duration: 0.5
+  Duration: 1
   StartScale: 2
 --- !u!82 &8252310
 AudioSource:
